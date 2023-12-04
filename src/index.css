@@ -1,0 +1,17 @@
+*:is(::before, ::after) {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    --_max-width: 800px;
+    --_padding: 1rem;
+
+    width: min(var(--_max-width), 100% - (var(--_padding) * 2));
+    margin-block: 1rem;
+    margin-inline: auto;
+}
